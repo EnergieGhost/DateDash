@@ -1,0 +1,197 @@
+/* sommaire*/
+
+/* 1-header */
+/* 2-Texte de titre du compteur */
+/* 3-bouton changement de style */
+/* 4-grid les deux affichage */
+/* 5-bouton reset date*/
+/* 6-formulaire Settings */
+
+
+
+/* 1-header */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #20416F;
+}
+
+.main-header {
+    background-color: #D6D6D6;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.main-header div {
+    display: flex;
+    align-items: center;
+    
+}
+
+.main-header div svg {
+    width: 100px;
+    height: 100px;
+    margin: 35px 0 35px 0;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    margin: 35px 0 35px 0;
+    padding: 0;
+    gap: 10px;
+}
+
+.main-nav a {
+    background-color: #20416F;
+    color: #D6D6D6;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* 2-Texte de titre du compteur */
+h2 {
+    color: #D6D6D6;
+    text-align: center;
+    font-size: 30px;
+    margin: 20px;
+}
+
+/* 3-bouton changement de style */
+.buttonSlide { 
+  display: none;
+  
+}
+
+.slide {
+  display: inline-block;
+  height: 40px;
+  width: 100px;
+  background-color: #037971;
+  position: relative;
+  transition: all .3s;
+  border-radius: 60px;
+  border: 5px solid black;
+}
+
+.slide:after {
+  content: "";
+  height: 24px;
+  width: 24px;
+  background-color: #EBEBEB;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: all .3s;
+  border-radius: 50%;
+}
+
+.buttonSlide:checked + .slide:after {
+  transform: translateX(60px);
+}
+
+.buttonSlide:checked + .slide {
+  background-color: #D64933;
+}
+
+.chooseStyle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chooseStyle > p {
+    
+    color: #EBEBEB;
+    font-size: 25px;
+    margin: 0;
+    padding: 10px;
+}
+  
+/* 4-grid les deux affichage */
+.grid { 
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 200px;
+    justify-content: center;
+    gap: 40px;
+    margin: 5px;
+}
+ 
+.date, .dateSecondPosition { 
+    width: 200px;
+    height: 200px;
+    background-color: #D6D6D6;
+    border: 5px solid black;
+    border-radius: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.date p, .dateSecondPosition p {
+    margin: 10px;
+    padding: 0;
+    font-family: Saira Stencil One;
+}
+
+.dateSecondPosition {
+    width: 440px;
+    border-radius: 50px;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+    
+.date > p, .dateSecondPosition > p {
+  color: #20416F;
+  font-size: 30px;
+}
+
+.date p:last-child, .dateSecondPosition p:last-child {
+  color: #D64933;
+  font-size: 40px;
+}
+
+/* 5-bouton reset date*/
+.removeDate {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonDelete2 {
+  margin: 5px;
+  padding: 7px;
+  color: #EBEBEB;
+  border: 5px solid black;
+  background-color: #D64933;
+  border-radius: 15px;
+}
+
+/* 6-formulaire Settings */
+.formSettings {
+    
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.formSettings form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 200px;
+    padding: 15px;
+    background-color: #D6D6D6;
+    border: 5px solid black;
+    border-radius: 50px;
+}
